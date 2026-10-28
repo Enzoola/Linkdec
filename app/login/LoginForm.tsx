@@ -14,7 +14,7 @@ export function LoginForm() {
     const { error } = await supabase.auth.signInWithOtp({
       email: email.trim(),
       options: {
-  emailRedirectTo: "https://linkdec-jnc22ldc8-enzo-2ace.vercel.app/auth/callback",
+  emailRedirectTo: "https://linkdec-sooty.vercel.app/auth/callback",
 },
     });
     if (error) {
