@@ -13,7 +13,9 @@ export function LoginForm() {
     const supabase = createClient();
     const { error } = await supabase.auth.signInWithOtp({
       email: email.trim(),
-      options: { emailRedirectTo: `${window.location.origin}/auth/callback` },
+      options: {
+  emailRedirectTo: "https://linkdec-jnc22ldc8-enzo-2ace.vercel.app/auth/callback",
+},
     });
     if (error) {
       setState("error");
